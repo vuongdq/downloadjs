@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Software Hub - Free Downloads</title>
+  <link rel="stylesheet" href="/frontend/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="frontend-wrapper">
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <h1>Software Hub</h1>
+      </div>
+      <div class="navbar-auth">
+        <span id="userStatus">Not logged in</span>
+        <button id="loginBtn" class="btn btn-login">Login</button>
+        <button id="registerBtn" class="btn btn-login">Register</button>
+        <button id="profileBtn" class="btn btn-login" style="display: none;">Profile</button>
+        <button id="logoutBtn" class="btn btn-login" style="display: none;">Logout</button>
+      </div>
+    </nav>
+
+    <div class="ad-banner ad-top">
+      <div class="ad-placeholder">Advertisement (728x90)</div>
+    </div>
+
+    <header class="hero-section">
+      <div class="hero-content">
+        <h2>Download Free & Safe Software</h2>
+        <p>Explore a vast library of software for all your needs.</p>
+      </div>
+    </header>
+
+    <div class="ad-banner ad-left">
+      <div class="ad-placeholder">Advertisement (160x600)</div>
+    </div>
+
+    <main class="main-content">
+      <section class="filter-section">
+        <div class="filter-container">
+          <input type="text" id="searchInput" placeholder="Search software..." class="search-bar">
+          <select id="categoryFilter" class="filter-select">
+            <option value="">All Categories</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="category-section">
+        <h2>Software Categories</h2>
+        <div class="category-list" id="categoryList"></div>
+      </section>
+
+      <div class="ad-banner ad-middle">
+        <div class="ad-placeholder">Advertisement (728x90)</div>
+      </div>
+    </main>
+
+    <div class="ad-banner ad-right">
+      <div class="ad-placeholder">Advertisement (160x600)</div>
+    </div>
+
+    <footer class="frontend-footer">
+      <p>© 2025 Software Hub. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close">×</span>
+      <h2>Login</h2>
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="loginEmail">Email</label>
+          <input type="email" id="loginEmail" placeholder="Enter email" required>
+        </div>
+        <div class="form-group">
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" placeholder="Enter password" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+        <p id="loginMessage" class="error-message"></p>
+      </form>
+    </div>
+  </div>
+
+  <div id="registerModal" class="modal">
+    <div class="modal-content">
+      <span class="close">×</span>
+      <h2>Register</h2>
+      <form id="registerForm">
+        <div class="form-group">
+          <label for="registerUsername">Username</label>
+          <input type="text" id="registerUsername" placeholder="Enter username" required>
+        </div>
+        <div class="form-group">
+          <label for="registerEmail">Email</label>
+          <input type="email" id="registerEmail" placeholder="Enter email" required>
+        </div>
+        <div class="form-group">
+          <label for="registerPassword">Password</label>
+          <input type="password" id="registerPassword" placeholder="Enter password" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Register</button>
+        <p id="registerMessage" class="error-message"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="/frontend/frontend.js"></script>
+</body>
+</html>

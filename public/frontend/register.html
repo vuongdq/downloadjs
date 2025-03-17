@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng ký - Software Hub</title>
+  <link rel="stylesheet" href="/frontend/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="login-container">
+    <h2>Đăng ký</h2>
+    <form id="registerForm">
+      <div class="form-group">
+        <label for="registerUsername">Tên người dùng</label>
+        <input type="text" id="registerUsername" placeholder="Nhập tên người dùng" required>
+      </div>
+      <div class="form-group">
+        <label for="registerEmail">Email</label>
+        <input type="email" id="registerEmail" placeholder="Nhập email" required>
+      </div>
+      <div class="form-group">
+        <label for="registerPassword">Mật khẩu</label>
+        <input type="password" id="registerPassword" placeholder="Nhập mật khẩu" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Đăng ký</button>
+      <p id="registerMessage" class="error-message"></p>
+    </form>
+    <p>Đã có tài khoản? <a href="/frontend/login.html">Đăng nhập</a></p>
+  </div>
+  <script src="/frontend/frontend.js"></script>
+</body>
+</html>

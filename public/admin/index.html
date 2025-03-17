@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel - Software Hub</title>
+  <link rel="stylesheet" href="/admin/styles.css">
+</head>
+<body>
+  <div class="dashboard">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>Admin Panel</h2>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="#" onclick="showSection('users')" class="active"><i class="icon">👤</i> Manage Users</a></li>
+          <li><a href="#" onclick="showSection('categories')"><i class="icon">📂</i> Manage Categories</a></li>
+          <li><a href="#" onclick="showSection('softwares')"><i class="icon">💾</i> Manage Software</a></li>
+          <li><a href="#" onclick="openFrontend()"><i class="icon">🌐</i> View Frontend</a></li>
+          <li><a href="#" onclick="logout()"><i class="icon">🚪</i> Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="main-content">
+      <header class="main-header">
+        <h1>Admin Dashboard</h1>
+      </header>
+
+      <section id="users" class="content-section">
+        <div class="section-header"><h3>Manage Users</h3></div>
+        <div class="form-container">
+          <form id="userForm" class="form-grid">
+            <div class="form-group">
+              <label for="userUsername">Username</label>
+              <input type="text" id="userUsername" placeholder="Enter username" required>
+            </div>
+            <div class="form-group">
+              <label for="userEmail">Email</label>
+              <input type="email" id="userEmail" placeholder="Enter email" required>
+            </div>
+            <div class="form-group">
+              <label for="userPassword">Password</label>
+              <input type="password" id="userPassword" placeholder="Leave blank if unchanged">
+            </div>
+            <div class="form-group">
+              <label for="userRole">Role</label>
+              <select id="userRole">
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Add User</button>
+          </form>
+        </div>
+        <div class="table-container">
+          <table>
+            <thead><tr><th>Username</th><th>Email</th><th>Role</th><th>Actions</th></tr></thead>
+            <tbody id="userList"></tbody>
+          </table>
+          <div class="pagination" id="userPagination"></div>
+        </div>
+      </section>
+
+      <section id="categories" class="content-section" style="display: none;">
+        <div class="section-header"><h3>Manage Categories</h3></div>
+        <div class="form-container">
+          <form id="categoryForm" class="form-grid">
+            <div class="form-group">
+              <label for="categoryName">Category Name</label>
+              <input type="text" id="categoryName" placeholder="Enter category name" required>
+            </div>
+            <div class="form-group full-width">
+              <label for="categoryDesc">Description</label>
+              <textarea id="categoryDesc" placeholder="Enter description"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Category</button>
+          </form>
+        </div>
+        <div class="table-container">
+          <table>
+            <thead><tr><th>Name</th><th>Description</th><th>Actions</th></tr></thead>
+            <tbody id="categoryList"></tbody>
+          </table>
+          <div class="pagination" id="categoryPagination"></div>
+        </div>
+      </section>
+
+      <section id="softwares" class="content-section" style="display: none;">
+        <div class="section-header"><h3>Manage Software</h3></div>
+        <div class="form-container">
+          <form id="softwareForm" class="form-grid">
+            <div class="form-group">
+              <label for="softwareTitle">Title</label>
+              <input type="text" id="softwareTitle" placeholder="Enter title" required>
+            </div>
+            <div class="form-group">
+              <label for="softwareCategory">Category</label>
+              <select id="softwareCategory" required><option value="">Select category</option></select>
+            </div>
+            <div class="form-group">
+              <label for="softwareLink">Download Link</label>
+              <input type="text" id="softwareLink" placeholder="Enter download link" required>
+            </div>
+            <div class="form-group full-width">
+              <label for="softwareDesc">Description</label>
+              <textarea id="softwareDesc" placeholder="Enter description"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Software</button>
+          </form>
+        </div>
+        <div class="table-container">
+          <table>
+            <thead><tr><th>Title</th><th>Category</th><th>Download Link</th><th>Actions</th></tr></thead>
+            <tbody id="softwareList"></tbody>
+          </table>
+          <div class="pagination" id="softwarePagination"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="/admin/script.js"></script>
+</body>
+</html>

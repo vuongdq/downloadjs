@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile - Software Hub</title>
+  <link rel="stylesheet" href="/frontend/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="frontend-wrapper">
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <h1>Software Hub</h1>
+      </div>
+      <div class="navbar-auth">
+        <span id="userStatus">Not logged in</span>
+        <button id="loginBtn" class="btn btn-login">Login</button>
+        <button id="registerBtn" class="btn btn-login">Register</button>
+        <button id="profileBtn" class="btn btn-login" style="display: none;">Profile</button>
+        <button id="logoutBtn" class="btn btn-login" style="display: none;">Logout</button>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <section class="profile-section">
+        <h2>User Profile</h2>
+        <div class="profile-info">
+          <p><strong>Username:</strong> <span id="profileUsername"></span></p>
+          <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+          <p><strong>Role:</strong> <span id="profileRole"></span></p>
+        </div>
+        <a href="/" class="btn btn-primary">Back to Home</a>
+      </section>
+    </main>
+
+    <footer class="frontend-footer">
+      <p>© 2025 Software Hub. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="/frontend/frontend.js"></script>
+</body>
+</html>
